@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Hamcrest\Core\DescribedAs;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
@@ -37,9 +38,21 @@ class Product extends Model
 
     }
 
-    public function index()
+    public function category()
     {
+        return $this->belongsTo(Category::class);
 
+    }
+
+
+    public function shops()
+    {
+        return $this->belongsTo(Shop::class);
+    }
+
+    public function descriptions()
+    {
+        return $this->belongsTo(ProductDescription::class);
     }
 
 

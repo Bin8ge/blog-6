@@ -72,6 +72,7 @@ return array(
     'Facade\\Ignition\\' => array($vendorDir . '/facade/ignition/src'),
     'Facade\\IgnitionContracts\\' => array($vendorDir . '/facade/ignition-contracts/src'),
     'Facade\\FlareClient\\' => array($vendorDir . '/facade/flare-client-php/src'),
+    'Encore\\WangEditor\\' => array($vendorDir . '/laravel-admin-ext/wang-editor/src'),
     'Encore\\Admin\\' => array($vendorDir . '/encore/laravel-admin/src'),
     'Egulias\\EmailValidator\\' => array($vendorDir . '/egulias/email-validator/src'),
     'EasyWeChat\\' => array($vendorDir . '/overtrue/wechat/src'),

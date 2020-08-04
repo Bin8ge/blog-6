@@ -17,8 +17,8 @@ class ComposerStaticInit8402be66284fd6a2eaf714340d4bbc8a
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
-        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
+        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
@@ -26,13 +26,13 @@ class ComposerStaticInit8402be66284fd6a2eaf714340d4bbc8a
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
+        '4e8671d7be9056dcd04ddd9e8e15f9cc' => __DIR__ . '/..' . '/encore/laravel-admin/src/helpers.php',
         '9cdd7b9056abc3081735233ba9dd9c7f' => __DIR__ . '/..' . '/facade/flare-client-php/src/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'f0e7e63bbb278a92db02393536748c5f' => __DIR__ . '/..' . '/overtrue/wechat/src/Kernel/Support/Helpers.php',
         '6747f579ad6817f318cc3a7e7a0abb93' => __DIR__ . '/..' . '/overtrue/wechat/src/Kernel/Helpers.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         'b6ec61354e97f32c0ae683041c78392a' => __DIR__ . '/..' . '/scrivo/highlight.php/HighlightUtilities/functions.php',
-        '4e8671d7be9056dcd04ddd9e8e15f9cc' => __DIR__ . '/..' . '/encore/laravel-admin/src/helpers.php',
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
         'f960e77410032f236cef8c56617b313e' => __DIR__ . '/..' . '/overtrue/laravel-lang/src/helpers.php',
     );
@@ -151,6 +151,7 @@ class ComposerStaticInit8402be66284fd6a2eaf714340d4bbc8a
         ),
         'E' => 
         array (
+            'Encore\\WangEditor\\' => 18,
             'Encore\\Admin\\' => 13,
             'Egulias\\EmailValidator\\' => 23,
             'EasyWeChat\\' => 11,
@@ -445,6 +446,10 @@ class ComposerStaticInit8402be66284fd6a2eaf714340d4bbc8a
         array (
             0 => __DIR__ . '/..' . '/facade/flare-client-php/src',
         ),
+        'Encore\\WangEditor\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel-admin-ext/wang-editor/src',
+        ),
         'Encore\\Admin\\' => 
         array (
             0 => __DIR__ . '/..' . '/encore/laravel-admin/src',
@@ -541,6 +546,7 @@ class ComposerStaticInit8402be66284fd6a2eaf714340d4bbc8a
         'App\\Admin\\Controllers\\ExampleController' => __DIR__ . '/../..' . '/app/Admin/Controllers/ExampleController.php',
         'App\\Admin\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Admin/Controllers/HomeController.php',
         'App\\Admin\\Controllers\\ProductsController' => __DIR__ . '/../..' . '/app/Admin/Controllers/ProductsController.php',
+        'App\\Admin\\Controllers\\ShopController' => __DIR__ . '/../..' . '/app/Admin/Controllers/ShopController.php',
         'App\\Admin\\Controllers\\UsersController' => __DIR__ . '/../..' . '/app/Admin/Controllers/UsersController.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
@@ -564,6 +570,7 @@ class ComposerStaticInit8402be66284fd6a2eaf714340d4bbc8a
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Models\\Category' => __DIR__ . '/../..' . '/app/Models/Category.php',
         'App\\Models\\Product' => __DIR__ . '/../..' . '/app/Models/Product.php',
+        'App\\Models\\ProductDescription' => __DIR__ . '/../..' . '/app/Models/ProductDescription.php',
         'App\\Models\\ProductSku' => __DIR__ . '/../..' . '/app/Models/ProductSku.php',
         'App\\Models\\Shop' => __DIR__ . '/../..' . '/app/Models/Shop.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
@@ -1775,6 +1782,9 @@ class ComposerStaticInit8402be66284fd6a2eaf714340d4bbc8a
         'Encore\\Admin\\Widgets\\Tab' => __DIR__ . '/..' . '/encore/laravel-admin/src/Widgets/Tab.php',
         'Encore\\Admin\\Widgets\\Table' => __DIR__ . '/..' . '/encore/laravel-admin/src/Widgets/Table.php',
         'Encore\\Admin\\Widgets\\Widget' => __DIR__ . '/..' . '/encore/laravel-admin/src/Widgets/Widget.php',
+        'Encore\\WangEditor\\Editor' => __DIR__ . '/..' . '/laravel-admin-ext/wang-editor/src/Editor.php',
+        'Encore\\WangEditor\\WangEditor' => __DIR__ . '/..' . '/laravel-admin-ext/wang-editor/src/WangEditor.php',
+        'Encore\\WangEditor\\WangEditorServiceProvider' => __DIR__ . '/..' . '/laravel-admin-ext/wang-editor/src/WangEditorServiceProvider.php',
         'Error' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/Error.php',
         'Facade\\FlareClient\\Api' => __DIR__ . '/..' . '/facade/flare-client-php/src/Api.php',
         'Facade\\FlareClient\\Concerns\\HasContext' => __DIR__ . '/..' . '/facade/flare-client-php/src/Concerns/HasContext.php',
