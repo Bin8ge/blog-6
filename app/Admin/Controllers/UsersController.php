@@ -53,6 +53,7 @@ class UsersController extends AdminController
 
             // 去掉删除
             $actions->disableDelete();
+            $actions->disableView();
 
         });
 

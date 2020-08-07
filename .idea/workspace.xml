@@ -2,44 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06e1c036-3899-4159-876a-55f669f33978" name="Default Changelist" comment="first">
-      <change afterPath="$PROJECT_DIR$/app/Models/ProductDescription.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/upload/images/Ant-2020-07-22-15-26-39.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin-ext/wang-editor/wangEditor-3.0.10/release/fonts/w-e-icon.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin-ext/wang-editor/wangEditor-3.0.10/release/wangEditor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin-ext/wang-editor/wangEditor-3.0.10/release/wangEditor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin-ext/wang-editor/wangEditor-3.0.10/release/wangEditor.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin-ext/wang-editor/wangEditor-3.0.10/release/wangEditor.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/vendor/laravel-admin-ext/wang-editor/wangEditor-3.0.10/release/wangEditor.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/laravel-admin-ext/wang-editor/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/laravel-admin-ext/wang-editor/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/laravel-admin-ext/wang-editor/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/laravel-admin-ext/wang-editor/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/laravel-admin-ext/wang-editor/resources/assets/wangEditor-3.0.10/release/fonts/w-e-icon.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/laravel-admin-ext/wang-editor/resources/assets/wangEditor-3.0.10/release/wangEditor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/laravel-admin-ext/wang-editor/resources/assets/wangEditor-3.0.10/release/wangEditor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/laravel-admin-ext/wang-editor/resources/assets/wangEditor-3.0.10/release/wangEditor.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/laravel-admin-ext/wang-editor/resources/assets/wangEditor-3.0.10/release/wangEditor.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/laravel-admin-ext/wang-editor/resources/assets/wangEditor-3.0.10/release/wangEditor.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/laravel-admin-ext/wang-editor/resources/views/editor.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/laravel-admin-ext/wang-editor/src/Editor.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/laravel-admin-ext/wang-editor/src/WangEditor.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/laravel-admin-ext/wang-editor/src/WangEditorServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/test.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Admin/Controllers/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin/Controllers/ProductsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Admin/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin/Controllers/UsersController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Admin/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin/bootstrap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/App/Models/Shop.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/ProductSku.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ProductSku.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/UserRole.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserRole.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +35,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
@@ -103,7 +77,8 @@
       <option name="presentableId" value="Default" />
       <updated>1596091442890</updated>
       <workItem from="1596091445443" duration="69670000" />
-      <workItem from="1596442678943" duration="10586000" />
+      <workItem from="1596442678943" duration="16356000" />
+      <workItem from="1596623523677" duration="15640000" />
     </task>
     <servers />
   </component>
@@ -115,7 +90,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
