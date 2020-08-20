@@ -22,9 +22,9 @@ class ProductSku extends Model
         return $this->belongsTo(Product::class);
     }
 
-    public function productskudescription()
+    public function productskudescriptions()
     {
-        return $this->hasOne(ProductDescription::class,'product_sku_id','id');
+        return $this->hasOne(ProductSkuDescription::class,'product_sku_id','id');
     }
 
 

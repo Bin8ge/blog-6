@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Jobs\SyncOneProductToEs;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\Shop;
@@ -24,6 +25,7 @@ class ProductsController extends AdminController
     protected $id_key = '商品ID';
     protected $product_core_key = '商品编码';
     protected $title_key = '商品名称';
+    protected $long_title_key = '商品长标题';
     protected $bar_code_key = '国条码';
     protected $category_id_key = '商品分类';
     protected $status_key = '上架';
@@ -119,8 +121,10 @@ class ProductsController extends AdminController
 
         $form->text('product_core', $this->product_core_key);
         $form->text('title', $this->title_key)->required();
+        $form->text('long_title', $this->long_title_key)->required();
         $form->text('bar_code', $this->bar_code_key)->required();
         $form->image('image','封面图片')->rules('required|image');
+
         $form->select('category_id', $this->category_id_key)->options(function ($category_id){
             $category = Category::find($category_id);
             if ($category) {
@@ -142,19 +146,48 @@ class ProductsController extends AdminController
         //创建一个富文本编辑器
        $form->editor('productdescriptions.description','商品描述')->rules('required');
 
+        $form->hasMany('images','商品图片设置',function (Form\NestedForm $form){
+            $form->multipleImage('image_url','商品详情图片')
+                ->sortable()
+                ->removable()
+                ->required()
+                ->options([
+                    'dropZoneEnabled' => true, // 该参数允许拖拽上传
+                    'browseOnZoneClick' => true, // 该参数允许点击上传
+                    'slugCallback' => false, // 该参数是重新选择后依旧保留之前的，并且不会重复显示
+                    'uploadUrl' => '#', // 异步上传
+                    'showUpload' => false, // 是否显示上传按钮
+                    'layoutTemplates' => ['actionUpload' => ''], // 该参数要与uploadUrl结合使用，目的 为了不是异步上传的，但是能删掉多张图片中的某一张
+                    'maxFileCount' => 5, // 该参数是最多只能选择多少张
+                ]);
+        });
+
         // 直接添加一对多的关联模型
-        $form->hasMany('sku', 'SKU 列表', function (Form\NestedForm $form) {
+        $form->hasMany('skus', 'SKU 列表', function (Form\NestedForm $form) {
             $form->text('title', 'SKU 名称')->rules('required');
             $form->text('description', 'SKU 描述')->rules('required');
             $form->text('price', '单价')->rules('required|numeric|min:0.01');
             $form->text('stock', '剩余库存')->rules('required|integer|min:0');
         });
+
+        $form->hasMany('properties', '商品属性', function (Form\NestedForm $form) {
+            $form->text('name', '属性名称')->rules('required');
+            $form->text('value', '属性值')->rules('required');
+        });
+
         // 定义事件回调，当模型即将保存时会触发这个回调
         $form->saving(function (Form $form) {
             $form->model()->price = collect($form->input('sku'))->where(Form::REMOVE_FLAG_NAME, 0)->min('price') ?: 0;
 
             $form->model()->product_core = strtotime(date('Y-m-d H:i:s',time()));
         });
+
+
+        $form->saved(function (Form $form) {
+            $product = $form->model();
+            dispatch(new SyncOneProductToES($product));
+        });
+
         return $form;
     }
 }
