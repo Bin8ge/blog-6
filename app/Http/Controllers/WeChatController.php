@@ -23,7 +23,7 @@ class WeChatController extends Controller
             //用户的密码需要他在第一次登录的时候进行设置
             //手机号码需要进行绑定,需要根据用户id来进行异构索引表分表
             $result = User::create([
-                'id' => $this->uuid(),
+                //'id' => $this->uuid(),
                 'Openid' => $WeChatUserInfo['id'],
                 'username' => $WeChatUserInfo['name'],
                 'role_id' => 1,//角色默认1位普通用户
@@ -41,7 +41,7 @@ class WeChatController extends Controller
         $redirect_url = $request->redirect_url;
         if ($redirect_url == '') {
             // code...
-            return \redirect('/products');
+            return \redirect('/index');
         }else{
             return \redirect($redirect_url);
         }

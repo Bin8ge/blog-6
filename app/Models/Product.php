@@ -99,6 +99,13 @@ class Product extends Model
         return $this->hasMany(ProductProperties::class);
     }
 
+    /**
+     * Notes:
+     * User: bingo
+     * Date: 2020/10/15
+     * Time: 18:08
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function images()
     {
         return $this->hasMany(ProductImage::class);

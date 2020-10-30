@@ -17,8 +17,10 @@
  * Admin::js('/packages/prettydocs/js/main.js');
  *
  */
-
+use App\Admin\Extensions\WangEditor;
+use Encore\Admin\Form;
 Encore\Admin\Form::forget(['map']);
+Form::extend('editor',WangEditor::class);
 
 Admin::js('/vendor/laravel-admin/AdminLTE/plugins/select2/select2.full.min.js');
 Admin::js('/vendor/laravel-admin/AdminLTE/plugins/select2/i18n/zh-CN.js');

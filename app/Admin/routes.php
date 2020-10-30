@@ -24,7 +24,16 @@ Route::group([
     $router->post('categories', 'CategoriesController@store'); # 添加数据提交按钮
 
 
+    $router->get('audit', 'AuditProductController@index'); # 商品审核
+    $router->get('audi/{id}/edit', 'AuditProductController@edit'); # 商品审核
+    $router->get('audit/{id}', 'AuditProductController@show'); # 商品审核
+
+
+    $router->resource('audit', AuditProductController::class);
     $router->resource('products', ProductsController::class);
     $router->resource('shops', ShopController::class);
+
+
+
 
 });

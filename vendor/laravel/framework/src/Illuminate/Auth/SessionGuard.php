@@ -130,7 +130,7 @@ class SessionGuard implements StatefulGuard, SupportsBasicAuth
         if (! is_null($this->user)) {
             return $this->user;
         }
-        // 这里读取session拿到user的id　，
+
         $id = $this->session->get($this->getName());
 
         // First we will try to load the user using the identifier in the session if
@@ -153,7 +153,7 @@ class SessionGuard implements StatefulGuard, SupportsBasicAuth
             }
         }
 
-        return $this->user; // 这里就直接返回用户id了，
+        return $this->user;
     }
 
     /**
@@ -352,7 +352,6 @@ class SessionGuard implements StatefulGuard, SupportsBasicAuth
      */
     public function attempt(array $credentials = [], $remember = false)
     {
-        // 这里触发　试图登录事件，此时还没有登录
         $this->fireAttemptEvent($credentials, $remember);
 
         $this->lastAttempted = $user = $this->provider->retrieveByCredentials($credentials);
@@ -360,7 +359,6 @@ class SessionGuard implements StatefulGuard, SupportsBasicAuth
         // If an implementation of UserInterface was returned, we'll ask the provider
         // to validate the user against the given credentials, and if they are in
         // fact valid we'll log the users into the application and return true.
-        // 这里会调用hasValidCredentials，其实就是验证用户名和密码的一个过程
         if ($this->hasValidCredentials($user, $credentials)) {
             $this->login($user, $remember);
 
@@ -420,7 +418,6 @@ class SessionGuard implements StatefulGuard, SupportsBasicAuth
      */
     public function login(AuthenticatableContract $user, $remember = false)
     {
-        // 直接更新session,这里就是把session存起来，session的键在该方法的getName() 里边，
         $this->updateSession($user->getAuthIdentifier());
 
         // If the user should be permanently "remembered" by the application we will
@@ -435,9 +432,8 @@ class SessionGuard implements StatefulGuard, SupportsBasicAuth
         // If we have an event dispatcher instance set we will fire an event so that
         // any listeners will hook into the authentication events and run actions
         // based on the login and logout events fired from the guard instances.
-        // 触发登录事件，已经登录了这个时候，
         $this->fireLoginEvent($user, $remember);
-        // 将user对象保存到sessionGuard , 后续的类访问Auth::user();直接拿到
+
         $this->setUser($user);
     }
 

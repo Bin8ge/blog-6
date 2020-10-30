@@ -64,13 +64,13 @@ class AuthManager implements FactoryContract
     public function guard($name = null)
     {
         $name = $name ?: $this->getDefaultDriver();
-        // 意思就是要实例化出这个驱动并且返回
+
         return $this->guards[$name] ?? $this->guards[$name] = $this->resolve($name);
     }
 
     /**
      * Resolve the given guard.
-     * 这里是构造Auth-guard驱动
+     *
      * @param  string  $name
      * @return \Illuminate\Contracts\Auth\Guard|\Illuminate\Contracts\Auth\StatefulGuard
      *
@@ -84,7 +84,6 @@ class AuthManager implements FactoryContract
             throw new InvalidArgumentException("Auth guard [{$name}] is not defined.");
         }
 
-        //这里是如果你自己实现的驱动就返回
         if (isset($this->customCreators[$config['driver']])) {
             return $this->callCustomCreator($name, $config);
         }
@@ -102,7 +101,7 @@ class AuthManager implements FactoryContract
 
     /**
      * Call a custom driver creator.
-     *　 这里是构造Auth-guard驱动
+     *
      * @param  string  $name
      * @param  array  $config
      * @return mixed

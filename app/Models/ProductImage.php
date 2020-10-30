@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
+
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class ProductImage extends Model
 {
@@ -22,6 +24,6 @@ class ProductImage extends Model
 
     public function getImageUrlAttribute($pictures)
     {
-        $this->attributes['image_url'] = json_decode($pictures,true);
+       return json_decode($pictures,true);
     }
 }
