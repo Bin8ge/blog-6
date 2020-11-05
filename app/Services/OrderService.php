@@ -22,9 +22,9 @@ class OrderService
     public function __construct()
     {
         $this->Order = $this->TableOrderId();
-        $this->db1 = new pdo('192.168.1.89', 'root', 'root123', 'lms');
-        $this->db2 = new pdo('192.168.1.89', 'root', 'root123', 'lms_products');
-        $this->db3 = new pdo('192.168.1.89', 'root', 'root123', 'lms_orders');
+        $this->db1 = new pdo('192.168.1.87', 'root', 'root123', 'lms');
+        $this->db2 = new pdo('192.168.1.87', 'root', 'root123', 'lms_products');
+        $this->db3 = new pdo('192.168.1.87', 'root', 'root123', 'lms_orders');
 
 
 
@@ -83,6 +83,7 @@ class OrderService
                 ];
 
                 $OrderItemsRestful = $this->db3->add($OrderItemsData);
+
                 if (!in_array($OrderItemsRestful, [0, 1], true)) {
                     throw new InternalException('订单详情新增失败', 102);
                 }

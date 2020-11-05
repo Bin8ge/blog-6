@@ -34,7 +34,7 @@ class CartService
         if ($cart = $user->cartItems()->where('product_sku_id', $skuId)->first()){
             // 如果存在则直接叠加商品数量
             $cart->update([
-                'amount' => $cart->amount + $amount,
+                'amount' =>  $amount,
             ]);
         }else {
             // 否则创建一个新的购物车记录

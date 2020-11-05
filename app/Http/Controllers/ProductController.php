@@ -26,6 +26,8 @@ class ProductController extends Controller
         #构建查询
         $builder = (new ProductSearchBuilder)->onSale()->paginate($perPage,$page);
 
+
+
         #是否有搜索
         if ($search = $request->input('search', '')) {
             # 将搜索词根据空格拆分成数组，并且过滤空项

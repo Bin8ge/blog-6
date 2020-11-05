@@ -49,6 +49,7 @@ Route::group(['middleware'=> ['auth']],function(){
     Route::get('user_addresses','UserAddressesController@index')->name('user.addresses');
     Route::get('orders','OrdersController@store')->name('orders.store');
     Route::post('orders', 'OrdersController@store')->name('orders.add');
+    Route::get('orderList', 'OrdersController@index')->name('orders.index');
 });
 
 

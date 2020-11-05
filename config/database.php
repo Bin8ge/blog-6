@@ -45,9 +45,21 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
+            'read' => [
+                'host' => [
+                    '192.168.1.101',
+                ],
+                'port'=>'3307'
+            ],
+            'write' => [
+                'host' => [
+                    '192.168.1.87',
+                ],
+                'port'=>'3306'
+            ],
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '192.168.1.89'),
-            'port' => env('DB_PORT', '3306'),
+            //'host' => env('DB_HOST', '192.168.1.87'),
+            //'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'lms'),
             'username' => env('DB_USERNAME', 'root'),
             'password' => env('DB_PASSWORD', 'root123'),
@@ -65,9 +77,21 @@ return [
 
         'mysql_products' => [
             'driver' => 'mysql',
+            'read' => [
+                'host' => [
+                    '192.168.1.101',
+                ],
+                'port'=>'3307'
+            ],
+            'write' => [
+                'host' => [
+                    '192.168.1.87',
+                ],
+                'port'=>'3306'
+            ],
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '192.168.1.89'),
-            'port' => env('DB_PORT', '3306'),
+            //'host' => env('DB_HOST', '192.168.1.87'),
+            //'port' => env('DB_PORT', '3306'),
             'database' => 'lms_products',
             'username' => env('DB_USERNAME', 'root'),
             'password' => env('DB_PASSWORD', 'root123'),
@@ -86,11 +110,11 @@ return [
         'mysql_orders' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '192.168.1.89'),
-            'port' => env('DB_PORT', '3306'),
-            'database' => 'lms_orders',
-            'username' => env('DB_USERNAME', 'root'),
-            'password' => env('DB_PASSWORD', 'root123'),
+            'host' => '192.168.1.89',
+            'port' => '8066',
+            'database' => 'TESTDB',
+            'username' => 'root',
+            'password' => '123456',
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
@@ -100,6 +124,7 @@ return [
             'engine' => null,
             'options' => extension_loaded('pdo_mysql') ? array_filter([
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+                PDO::ATTR_EMULATE_PREPARES => true,
             ]) : [],
         ],
 
@@ -186,7 +211,7 @@ return [
 
     'elasticsearch' => [
         // Elasticsearch 支持多台服务器负载均衡，因此这里是一个数组
-        'hosts' => explode(',', env('ES_HOSTS')),
+        'hosts' => explode(',', '192.168.1.87'),
     ]
 
 ];

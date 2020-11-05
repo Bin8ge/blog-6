@@ -23,7 +23,7 @@ $(function() {
         var default_num = $cart.attr("data-default-num");
         var max_buy = $cart.attr('max_buy') * 1;// 限购数量
         var nummax = $cart.attr('max') * 1;// 库存数量
-        var cartid = $cart.attr('data-cartid');
+        var cartid = $cart.attr('data-sku_id');
         if(isNaN(num) || $cart.val().indexOf(".") != -1){
             showBox("格式错误");
             $cart.val(default_num);
@@ -47,10 +47,10 @@ $(function() {
             return;
         }
         $.ajax({
-            url : APPMAIN + "/goods/cartadjustnum/",
+            url : APPMAIN + "cart",
             type : "post",
             data : {
-                "cartid" : cartid,
+                "sku_id" : cartid,
                 "num" : num
             },
             success : function(res) {
@@ -553,10 +553,10 @@ var Cart = {
         var obj = $(tmpObj);
 
         $.ajax({
-            url : APPMAIN + "/goods/cartadjustnum/",
+            url : APPMAIN + "cart",
             type : "post",
             data : {
-                "cartid" : cartid,
+                "sku_id" : cartid,
                 "num" : obj.val()
             },
             success : function(res) {
